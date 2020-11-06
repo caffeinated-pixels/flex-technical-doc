@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.42857143;
+  font-size: 1.125rem;
+}
+
+.fcontainer {
+  display: flex;
+  height: 100vh;
+}
+
+.fcontainer::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  background: url("https://thecakeisaliegaming.files.wordpress.com/2020/02/undraw_coding_6mjf.png") no-repeat fixed center;
+  background-size: cover;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* navbar styling classes */
+#navbar {
+  padding: 15px 30px 30px;
+  flex: 0 0 300px; /* no growth or shrink, width=300px */
+  background-color: lightblue;
+  background-color: rgba(173, 216, 230, 0.85);
+  overflow: auto;
+  border-right: solid;
+}
+
+h1 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid;
+}
+
+#navbar a, footer a {
+  color: #3399ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#navbar a:hover, #nav-bar a:focus, footer a:hover, footer a:focus {
+  color: #b45922;
+}
+
+#navbar li {
+  list-style: none;
+  margin-bottom: 22px;
+}
+/* end of navbar styling classes */
+
+/* start of main-doc styling classes */
+#main-doc {
+  flex: 1 1 auto;
+  overflow-y: auto; /* only main-doc scrolls, nav stays fixed */
+  background-color: lightyellow;
+  background-color: rgba(255, 255, 224, 0.85);
+  padding: 15px 10% 0px 3%;
+}
+
+.main-section {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid lightblue;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+.main-section p {
+  margin-bottom: 15px;
+}
+
+.main-section ul {
+  margin-bottom: 15px;
+  padding-left: 40px;
+}
+
+.main-section li {
+  margin-bottom: 5px;
+}
+
+code {
+  background-color: #bbb;
+  background-color: rgba(220,220,220,0.7);
+}
+
+.code-block {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 3px #3399ff;
+}
+
+figure {
+  width: 100%;
+  margin: 30px 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.img-border {
+  box-shadow: 1px 1px 3px #3399ff;
+  border: 1px solid lightblue;
+}
+
+.img-dshadow {
+  box-shadow: 1px 1px 3px #3399ff;
+}
+/* end of main-doc styling classes */
+
+/* footer styling */
+footer {
+  margin-bottom: 30px;
+  color: #cc0000;
+}
+
+/* time for a media query */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .fcontainer {
+    flex-direction: column;
+  }
+
+  #navbar {
+    border-right: none;
+    border-bottom: solid;
+    padding: 10px 20px 20px;
+    flex-basis: 200px;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+  }
+
+  #navbar li {
+    margin: auto;
+    margin-bottom: 0px;
+    border-bottom: 1px solid;
+    padding: 6px 0;
+  }
+
+  #main-doc {
+    padding: 0px 20px;
+  }
+
+}
